@@ -10,11 +10,11 @@ function Dashboard() {
   const { isLogin } = useContext(usercontext);
   let navigate = useNavigate();
 
-  // useEffect(() => {
-  //   if (!isLogin) {
-  //     return navigate("/login");
-  //   }
-  // }, [isLogin]);
+   useEffect(() => {
+     if (!isLogin) {
+       return navigate("/login");
+     }
+   }, [isLogin]);
   return (
     <div className="">
       <SideBar />
