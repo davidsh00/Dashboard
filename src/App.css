@@ -1,34 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body{
-  @apply  bg-[rgba(45,58,75,255)] text-white
+@import url("http://fonts.cdnfonts.com/css/kg-hope-for-a-cure");
+body {
+  font-family: sans-serif;
+  background-color: #7b809a1e;
 }
-
-@layer components{
-
-    .log-form{
-        @apply border-black p-4 shadow-md
-    }
-    .log-form >*{
-        @apply mb-4
-    }
-    .log-form .form-input{
-        @apply flex flex-col sm:flex-row gap-x-4 gap-y-2 sm:justify-between
-    }
-    .input-icon{
-        @apply absolute left-1 top-0  translate-y-[50%] text-gray-700
-    }
-    .log-form .form-input input{
-        @apply border-2
-    }
-    .log-form .form-input input:invalid{
-        @apply border-red-500
-    }
-    .log-form .form-submit{
-        @apply w-full text-right
-    }
-    .submit-btn{
-        @apply bg-blue-400 text-white hover:bg-blue-600 px-4 py-2
-    }
+img {
+  @apply w-full h-full;
 }

@@ -1,0 +1,23 @@
+header {
+  @apply flex w-full flex-wrap  p-4 shadow justify-between items-center text-slate-600;
+}
+
+.header-right .pannel-item {
+  @apply hover:text-slate-900 text-lg;
+}
+
+.breadcrumb {
+  @apply flex flex-col text-slate-900;
+}
+.crumb-path {
+  @apply font-bold;
+}
+.crumb-address {
+  @apply flex;
+}
+.crumb-address > *:not(:last-child) {
+  @apply after:content-['/'] after:mx-2;
+}
+.crumb-address > *:not(:last-child) {
+  @apply text-slate-600;
+}

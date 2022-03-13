@@ -1,0 +1,3 @@
+.sidebar{
+    @apply fixed  h-screen bg-green-100 transition-all translate-x-[-100%] md:translate-x-0 w-[200px] py-4 
+}
