@@ -1,3 +1,29 @@
 .sidebar{
-    @apply fixed  h-screen bg-green-100 transition-all translate-x-[-100%] md:translate-x-0 w-[200px] py-4 
+    @apply fixed h-screen overflow-auto  transition-all translate-x-[-100%] md:translate-x-0 w-[250px] py-4 text-sm px-2 text-white;
+    background: linear-gradient(195deg,#42424a,#191919);
+}
+.sidebar::-webkit-scrollbar{
+    display: none;
+}
+.sidebar{
+    scrollbar-width: 0;
+}
+.sidebar>*{
+    @apply mb-4
+}
+.sidebar-item{
+    @apply   hover:bg-white hover:bg-opacity-10 transition-all rounded
+}
+.sidebar-item >*{
+    
+    @apply flex gap-4 p-3 px-4 
+}
+.sidebar-item.active{
+    @apply bg-red-700   
+}
+.sidebar-links {
+    @apply flex flex-col gap-4
+}
+.sidebar-title{
+    @apply uppercase my-3 font-bold
 }

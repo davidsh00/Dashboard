@@ -1,0 +1,3 @@
+.dashboard-content{
+    @apply w-full  transition-all md:pl-[250px] flex flex-col gap-4
+}

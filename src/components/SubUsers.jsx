@@ -1,13 +1,9 @@
 import { useContext } from "react";
 import usercontext from "../context/user/UserContex";
-import { addSubUserActon } from "../management/action/actionCreator";
 import Sub_item from "./Sub_item";
 
-function SubUser() {
-  const { subUsers, dispatch } = useContext(usercontext);
-  const handleAddsubUser = () => {
-    dispatch(addSubUserActon("new "));
-  };
+function SubUsers() {
+  const { subUsers } = useContext(usercontext);
 
   return (
     <div className="subuser-box">
@@ -25,4 +21,4 @@ function SubUser() {
   );
 }
 
-export default SubUser;
+export default SubUsers;
