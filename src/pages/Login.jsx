@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import usercontext from "./../context/user/UserContex";
+import usercontext from "./../context/user/UserContext";
 import { loginAction } from "./../context/user/action/actionCreator";
 import { useNavigate } from "react-router-dom";
 import "../styles/login.css";
@@ -15,11 +15,11 @@ function LoginForm() {
   };
   const company_name = "Site";
   return (
-    <div className="h-screen w-full flex  ">
+    <div className="login">
       <div className="login-image">
         <img src={loginImage} alt="login-image" />
       </div>
-      <div className="login-form w-full sm:w-[45%] flex justify-center items-center flex-col h-full">
+      <div className="login-form-wrapper">
         <p className="login-title mb-10">{company_name}</p>
         <p className="login-description mb-6">{`welcome to ${company_name}`}</p>
         <LoginForm />
@@ -37,8 +37,8 @@ function LoginForm() {
           <input type="password" id="loginPassword" placeholder=" " required />
           <label htmlFor="loginPassword">Password</label>
         </div>
-        <div className="text-right">
-          <button className="submit-btn">Login</button>
+        <div className="text-right mt-2">
+          <button className="btn">login</button>
         </div>
       </form>
     );

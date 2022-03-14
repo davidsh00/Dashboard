@@ -1,0 +1,30 @@
+.alert-list{
+    @apply flex flex-col fixed  right-4 bottom-4  z-[100000] gap-2 items-end transition-all max-h-screen overflow-auto
+}
+.alert-list::-webkit-scrollbar{
+    display: none;
+}
+.alert-list{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+    
+}
+.alert-box{
+    @apply  rounded shadow text-white p-4 flex items-center relative
+}
+.alert-box.info{
+    @apply bg-sky-600 bg-opacity-80 
+}
+.alert-box.error{
+    @apply bg-red-600 bg-opacity-80 
+}
+.alert-box.success{
+    @apply bg-green-600 bg-opacity-80 
+}
+.alert-box .alert-close{
+    @apply absolute right-2 top-2 transition-all hover:text-black
+}
+.alert-box .alert-msg{
+    @apply pr-4
+}

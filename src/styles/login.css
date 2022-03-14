@@ -3,39 +3,36 @@
   font-weight: bolder;
   font-size: 2rem;
 }
-.login-form .input-control {
+.login .login-form .input-control {
   @apply relative p-4  border border-slate-500;
 }
-.login-form .input-control label {
+.login .login-form .input-control label {
   @apply transition-all absolute  top-0 left-[.1rem] text-sm opacity-40;
 }
-.login-form .input-control input {
+.login .login-form .input-control input {
   @apply outline-none w-full h-full bg-inherit;
 }
-.login-form .input-control input:placeholder-shown + label {
+.login .login-form .input-control input:placeholder-shown + label {
   @apply top-[50%] left-[1rem]  translate-y-[-50%] text-base opacity-60;
 }
-.login-image {
+.login .login-image {
   @apply w-0 sm:w-[55%];
 }
 
-.login-image img {
+.login .login-image img {
   @apply object-cover;
 }
-.login-description {
+.login .login-description {
   @apply opacity-50;
 }
-.login-form {
-  @apply flex flex-col gap-4;
+.login-form-wrapper{
+  @apply w-full sm:w-[45%] flex h-full justify-center items-center flex-col
+}
+.login{
+  @apply h-screen w-full flex
 }
 
-.log-form .form-input {
-  @apply flex flex-col sm:flex-row gap-x-4 gap-y-2 sm:justify-between;
-}
-.input-icon {
-  @apply absolute left-1 top-0  translate-y-[50%] text-gray-700;
-}
 
-.submit-btn {
-  @apply bg-blue-400 text-white hover:bg-blue-600 px-4 py-2 transition-all;
-}
+
+
+

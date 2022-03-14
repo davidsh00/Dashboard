@@ -1,13 +1,10 @@
 import actionTypes from "./actionType";
 export const loginAction = () => {
-  return { type: actionTypes.LOGIN_VALID };
+  return { type: actionTypes.LOGIN};
 };
-export const addSubUserActon = (text) => {
-  return {
-    type: actionTypes.ADD_SUBUSER,
-    payload: text,
-  };
-};
+export const logoutAction=()=>{
+  return{type:actionTypes.LOGOUT}
+}
 
 export const removeItemActoin = (item, cat) => {
     return { type: actionTypes.REMOVE_ITEM, payload:{cat,item} };

@@ -2,10 +2,16 @@ import actionTypes from "./../action/actionType";
 
 export const userReducer = (state, action) => {
   switch (action.type) {
-    case actionTypes.LOGIN_VALID: {
+    case actionTypes.LOGIN: {
       return {
         ...state,
         isLogin: true,
+      };
+    }
+    case actionTypes.LOGOUT: {
+      return {
+        ...state,
+        isLogin: false,
       };
     }
 
@@ -20,16 +26,13 @@ export const userReducer = (state, action) => {
       };
     }
     case actionTypes.ADD_ITEM: {
-      console.log( [...new Set(['ali','mohammad'])])
       return {
         ...state,
-        [action.payload.cat]: [...new Set([
-            ...state[action.payload.cat],
-          action.payload.item])
-        ]
-       
-        
-    }}
+        [action.payload.cat]: [
+          ...new Set([...state[action.payload.cat], action.payload.item]),
+        ],
+      };
+    }
 
     default:
       return state;

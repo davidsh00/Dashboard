@@ -9,3 +9,23 @@ body {
 img {
   @apply w-full h-full;
 }
+.btn {
+  @apply rounded bg-red-600 overflow-hidden text-white z-10 px-4 py-2 relative;
+}
+.btn:hover::before{
+  width: 300px;
+  height: 300px;
+}
+.btn::before{
+  content: '';
+  position: absolute;
+  left:-10%;
+  top: -10%;
+  transform: translate(-50%,-50%);
+  width: 0;
+  height: 0;
+  background: linear-gradient(195deg,#42424a,#191919);
+  z-index: -1;
+  border-radius: 50%;
+  transition: all 550ms cubic-bezier(.4,0,.2,1)
+}

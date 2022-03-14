@@ -1,7 +1,9 @@
 header {
   @apply flex w-full flex-wrap  p-4 shadow justify-between items-center text-slate-600;
 }
-
+.header-right{
+  @apply flex gap-4 flex-row-reverse items-center;
+}
 .header-right .pannel-item {
   @apply hover:text-slate-900 text-lg;
 }

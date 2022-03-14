@@ -1,14 +1,18 @@
-import { UserProvider } from "./context/user/UserContex";
+import { UserProvider } from "./context/user/UserContext";
 import {BrowserRouter as Router,Routes,Route, Navigate}from 'react-router-dom'
 import "./App.css";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
+import Alert from "./components/layout/Alert";
+import { AlertProvider } from "./context/alert/AlertContext";
 
 function App() {
 
   return (
     <div className="App">
+      <AlertProvider>
+      <Alert/>
       <Router>
       <UserProvider>
         <Routes>
@@ -19,6 +23,7 @@ function App() {
         </Routes>
       </UserProvider>
       </Router>
+      </AlertProvider>
     </div>
   );
 }
