@@ -1,18 +1,19 @@
 input{
   @apply bg-inherit outline-none
 }
+
 .search-box{
   @apply relative border border-slate-600 rounded
 }
 .search-box input{
   @apply px-4 py-2
 }
+.search-box input + label {
+  @apply top-0 translate-y-[-50%] left-2 absolute transition-all;
+}
+.search-box input:placeholder-shown +label {
+  @apply left-2 top-[50%] translate-y-[-50%] ;
+}
 .search-box .search-btn{
   @apply absolute right-2 top-[50%] translate-y-[-50%]
-}
-.search-box input:focus + label {
-  @apply top-0 translate-y-[-50%] left-2;
-}
-.search-box label {
-  @apply left-2 top-[50%] translate-y-[-50%] absolute transition-all;
 }

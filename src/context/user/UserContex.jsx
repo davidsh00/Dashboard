@@ -1,5 +1,5 @@
 import { createContext, useReducer } from "react";
-import { userReducer } from "../../management/reducer/userReducer";
+import { userReducer } from "./reducer/userReducer";
 
 const usercontext = createContext();
 export function UserProvider({ children }) {
