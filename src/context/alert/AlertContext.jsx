@@ -8,16 +8,12 @@ export const AlertProvider = ({ children }) => {
   };
   const [state, dispatch] = useReducer(alertReducer, initialState);
   useEffect(() => {
-    setTimeout(() => {
-      dispatch(
-        clearAlertAction(
-          state.msgs[state.msgs.length - 1]
-            ? state.msgs[state.msgs.length - 1].text
-            : ""
-        )
-      );
-    }, 3000);
-  }, [state]);
+    if (state.msgs.length) {
+      setTimeout(() => {
+        dispatch(clearAlertAction(state.msgs[state.msgs.length - 1].text));
+      }, 3000);
+    }
+  }, [state.msgs]);
 
   return (
     <alertContext.Provider value={{ ...state, dispatch }}>
