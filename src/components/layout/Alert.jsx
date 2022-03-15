@@ -14,13 +14,21 @@ function Alert() {
     return (
       <div className="alert-list">
         {msgs.map((msg, i) => {
-          return<div className={`alert-box ${msg.type?msg.type:'info'} `} key={i}>
-            <p className="alert-msg">{msg.text}</p>
-            <button className="alert-close" onClick={() => alertClose(msg.text)}>
-              <FaTimes />
-            </button>
-          </div>
-})}
+          return (
+            <div
+              className={`alert-box ${msg.type ? msg.type : "info"} `}
+              key={i}
+            >
+              <p className="alert-msg">{msg.text}</p>
+              <button
+                className="alert-close"
+                onClick={() => alertClose(msg.id)}
+              >
+                <FaTimes />
+              </button>
+            </div>
+          );
+        })}
       </div>
     );
   }

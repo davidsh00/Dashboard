@@ -10,7 +10,7 @@ export const AlertProvider = ({ children }) => {
   useEffect(() => {
     if (state.msgs.length) {
       setTimeout(() => {
-        dispatch(clearAlertAction(state.msgs[state.msgs.length - 1].text));
+        dispatch(clearAlertAction(state.msgs[state.msgs.length - 1].id));
       }, 3000);
     }
   }, [state.msgs]);
