@@ -16,7 +16,7 @@
 }
 .sidebar-item >*{
     
-    @apply flex gap-4 p-3 px-4 
+    @apply flex gap-4 p-3 px-4  items-center
 }
 .sidebar-item.active{
     @apply bg-red-700   
@@ -26,4 +26,19 @@
 }
 .sidebar-title{
     @apply uppercase my-3 font-bold
+}
+.sidebar-small{
+@apply w-[50px]
+}
+.sidebar-small .sidebar-brand{
+    @apply gap-0
+}
+.sidebar-small .sidebar_item-title {
+display: none;
+}
+.sidebar-small .sidebar-item>*{
+    @apply p-0 justify-center h-8
+}
+.sidebar-small .sidebar-title{
+    @apply mb-10 
 }

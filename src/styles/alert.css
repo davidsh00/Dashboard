@@ -11,7 +11,7 @@
     
 }
 .alert-box{
-    @apply  rounded shadow text-white p-4 flex items-center relative
+    @apply  rounded shadow text-white p-4 flex items-center relative transition-all 
 }
 .alert-box.info{
     @apply bg-sky-600 bg-opacity-80 

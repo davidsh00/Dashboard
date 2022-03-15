@@ -10,6 +10,11 @@ const alertReducer = (state, action) => {
         ...state,
         msgs: [...state.msgs, action.payload],
       };
+    case "TOGGLE_SIDEBAR":
+      return {
+        ...state,
+        sidebarShow:!state.sidebarShow
+      };
     default:
       return state;
   }

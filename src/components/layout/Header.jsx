@@ -7,7 +7,7 @@ import usercontext from "./../../context/user/UserContext";
 import { logoutAction } from "../../context/user/action/actionCreator";
 import alertContext from "../../context/alert/AlertContext";
 import AlertCode from "../../context/alert/action/alertCode";
-import { setAlertAction } from "./../../context/alert/action/alertActionCreator";
+import { setAlertAction, toggleSidebarAction } from "./../../context/alert/action/alertActionCreator";
 
 function Header() {
   const { isLogin, dispatch } = useContext(usercontext);
@@ -21,6 +21,9 @@ function Header() {
   );
 
   function HeaderPanel() {
+    const handleToggleSidebar=()=>{
+      alertDispatch(toggleSidebarAction())
+    }
     return (
       <div className="header-right">
         <div className="pannel-item">
@@ -33,8 +36,8 @@ function Header() {
             <FaCog />
           </Link>
         </div>
-        <div className="pannel-item">
-          <Link to="#">
+        <div className="pannel-item" onClick={handleToggleSidebar}>
+          <Link to="">
             <FaBars />
           </Link>
         </div>

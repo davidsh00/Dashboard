@@ -9,11 +9,11 @@ import alertContext from "../context/alert/AlertContext";
 import AlertCode from "../context/alert/action/alertCode";
 import { setAlertAction } from "../context/alert/action/alertActionCreator";
 
+
 function Dashboard() {
   const { isLogin } = useContext(usercontext);
-  const { dispatch } = useContext(alertContext);
+  const { dispatch,sidebarShow } = useContext(alertContext);
   let navigate = useNavigate();
-
   useEffect(() => {
     if (!isLogin) {
       return navigate("/login");
@@ -24,7 +24,7 @@ function Dashboard() {
   return (
     <>
       <SideBar />
-      <div className="dashboard-content">
+      <div className={`dashboard-content ${sidebarShow?'md:pl-[250px]': 'md:pl-[50px]'} `}>
         <Header />
         <UserSection />
       </div>

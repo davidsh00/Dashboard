@@ -5,6 +5,7 @@ const alertContext = createContext();
 export const AlertProvider = ({ children }) => {
   const initialState = {
     msgs: [],
+    sidebarShow:true,
   };
   const [state, dispatch] = useReducer(alertReducer, initialState);
   useEffect(() => {

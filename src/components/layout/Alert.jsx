@@ -16,7 +16,7 @@ function Alert() {
         {msgs.map((msg, i) => {
           return (
             <div
-              className={`alert-box ${msg.type ? msg.type : "info"} `}
+              className={`alert-box ${msg.type ? msg.type : "info"}  `}
               key={i}
             >
               <p className="alert-msg">{msg.text}</p>
