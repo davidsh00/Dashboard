@@ -28,8 +28,12 @@
 .login-form-wrapper{
   @apply w-full sm:w-[45%] flex h-full justify-center items-center flex-col
 }
+
 .login{
   @apply h-screen w-full flex
+}
+.login .login-form{
+  @apply flex flex-col gap-4
 }
 
 

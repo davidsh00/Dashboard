@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "../styles/login.css";
 import loginImage from "../images/login-image-min.jpg";
 
-function LoginForm() {
+function Login() {
   const navigate = useNavigate();
   const { dispatch } = useContext(usercontext);
   const handleSubmit = (e) => {
@@ -20,7 +20,7 @@ function LoginForm() {
         <img src={loginImage} alt="login-image" />
       </div>
       <div className="login-form-wrapper">
-        <p className="login-title mb-10">{company_name}</p>
+        <p className="login-title mb-8">{company_name}</p>
         <p className="login-description mb-6">{`welcome to ${company_name}`}</p>
         <LoginForm />
       </div>
@@ -45,4 +45,4 @@ function LoginForm() {
   }
 }
 
-export default LoginForm;
+export default Login;
