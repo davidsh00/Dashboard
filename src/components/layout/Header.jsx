@@ -18,7 +18,7 @@ function Header() {
       <div className="order-1">
         <HeaderLeft />
       </div>
-      <div className="order-3 sm:order-2 w-full sm:w-auto">
+      <div className="order-3 sm:order-2 w-full sm:w-auto mt-4 sm:my-0">
         <SearchBox />
       </div>
       <div className="order-2 sm:order-3 ">

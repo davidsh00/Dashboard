@@ -1,37 +1,39 @@
-.user-section{
-    @apply flex flex-col p-4 gap-4
+.user-section {
+  @apply flex flex-col p-4 gap-4;
 }
 
-.user-section .user-details>*{
-@apply flex-grow    
+.user-section .user-details > * {
+  @apply flex-grow;
 }
-.user-add-wrapper,.user-list-wrapper,.doctor-list-wrapper{
-    @apply bg-white p-4 rounded-lg
+.user-add-wrapper,
+.user-list-wrapper,
+.doctor-list-wrapper {
+  @apply bg-white p-4 rounded-lg;
 }
-.user-section .add-item{
-    @apply flex justify-between  items-center gap-4 max-w-[600px] mx-auto
-
+.user-section .add-item {
+  @apply flex justify-between  items-center gap-4 max-w-[600px] mx-auto;
 }
-.user-section .add-input{
-    @apply border border-slate-700  max-w-[300px] p-2 grow shrink overflow-hidden
+.user-section .add-item input {
+  @apply rounded;
 }
-.user-section .user-details{
-    @apply flex flex-col sm:flex-row gap-4 sm:items-start 
-
+.user-section .add-input {
+  @apply border border-slate-700  max-w-[300px] p-2 grow shrink overflow-hidden;
 }
-.user-section .add-cat{
-    @apply flex flex-col 
+.user-section .user-details {
+  @apply flex flex-col sm:flex-row gap-4 sm:items-start;
 }
-.user-section .add-cat>*{
-    @apply flex justify-between items-center gap-2 
+.user-section .add-cat {
+  @apply flex flex-col;
 }
-.user-section .add-cat input,.user-section .add-cat label{
-    @apply cursor-pointer
+.user-section .add-cat > * {
+  @apply flex justify-between items-center gap-2;
 }
-.user-section .list_item{
-@apply flex justify-between items-center min-w-[100px] hover:bg-slate-200 p-2
-    
+.user-section .add-cat input,
+.user-section .add-cat label {
+  @apply cursor-pointer;
 }
-.user-section .doctor-list{
-
+.user-section .list_item {
+  @apply flex justify-between items-center min-w-[100px] hover:bg-slate-200 p-2;
+}
+.user-section .doctor-list {
 }
