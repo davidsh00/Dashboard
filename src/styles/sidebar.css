@@ -1,15 +1,14 @@
 .sidebar{
-    @apply fixed h-screen overflow-auto  transition-all translate-x-[-100%] md:translate-x-0 w-[250px] py-4 text-sm px-2 text-white;
+    @apply fixed h-screen flex flex-col  transition-all  w-[250px] py-4 text-sm px-2 text-white sm:translate-x-0 z-[100] gap-4;
     background: linear-gradient(195deg,#42424a,#191919);
 }
-.sidebar::-webkit-scrollbar{
-    display: none;
-}
-.sidebar{
-    scrollbar-width: 0;
-}
-.sidebar>*{
+.sidebar
+
+.sidebar>*:not(:last-child){
     @apply mb-4
+}
+.sidebar .sidebar-list{
+    @apply overflow-x-scroll
 }
 .sidebar-item{
     @apply   hover:bg-white hover:bg-opacity-10 transition-all rounded
@@ -28,7 +27,7 @@
     @apply uppercase my-3 font-bold
 }
 .sidebar-small{
-@apply w-[50px]
+@apply w-[50px]  sm:translate-x-0 translate-x-[-100%]
 }
 .sidebar-small .sidebar-brand{
     @apply gap-0
@@ -36,7 +35,7 @@
 .sidebar-small .sidebar_item-title {
 display: none;
 }
-.sidebar-small .sidebar-item>*{
+.sidebar-small .sidebar-item>*:not(.tooltip){
     @apply p-0 justify-center h-8
 }
 .sidebar-small .sidebar-title{

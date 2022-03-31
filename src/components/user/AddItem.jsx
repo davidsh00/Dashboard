@@ -1,23 +1,26 @@
 import { useContext, useState } from "react";
 import usercontext from "../../context/user/UserContext";
 import { addItemAction } from "../../context/user/action/actionCreator";
-import alertContext from "../../context/alert/AlertContext";
-import { setAlertAction } from "../../context/alert/action/alertActionCreator";
-import AlertCode from "../../context/alert/action/alertCode";
+import { toast } from "react-toastify";
 
 function AddItem() {
-  const { dispatch } = useContext(usercontext);
-  const { dispatch: alertDispatch } = useContext(alertContext);
+  const { dispatch, subUsers, subDoctors } = useContext(usercontext);
+  const sub = { subUsers, subDoctors };
+
   const [catType, setCatType] = useState("subUsers");
   const [text, setText] = useState("");
   function handleAdd(e) {
     e.preventDefault();
     if (text.trim() === "" || text.length === 0) {
       setText("");
-      alertDispatch(setAlertAction(AlertCode.itsEmpty, "error"));
+      toast.error("Type someThing...");
       return;
+    } else if (sub[catType].includes(text.trim())) {
+      toast.error("Your item has already been imported");
+      setText("");
     } else {
       dispatch(addItemAction(text.trim(), catType));
+      toast.success(`Item Added`);
       setText("");
     }
   }

@@ -6,24 +6,22 @@ import SearchBox from "../shared/SearchBox";
 import usercontext from "./../../context/user/UserContext";
 import { logoutAction } from "../../context/user/action/actionCreator";
 import alertContext from "../../context/alert/AlertContext";
-import AlertCode from "../../context/alert/action/alertCode";
-import { setAlertAction, toggleSidebarAction } from "./../../context/alert/action/alertActionCreator";
+import { toggleSidebarAction } from "./../../context/alert/action/alertActionCreator";
+import { toast } from "react-toastify";
 
 function Header() {
   const { isLogin, dispatch } = useContext(usercontext);
-  const { dispatch: alertDispatch } = useContext(alertContext);
+  const { dispatch: alertDispatch, sidebarShow } = useContext(alertContext);
+
   return (
     <header>
-      <BreadCrumb />
+      <HeaderLeft />
       <SearchBox />
-      <HeaderPanel />
+      <HeaderRight />
     </header>
   );
 
-  function HeaderPanel() {
-    const handleToggleSidebar=()=>{
-      alertDispatch(toggleSidebarAction())
-    }
+  function HeaderRight() {
     return (
       <div className="header-right">
         <div className="pannel-item">
@@ -36,11 +34,6 @@ function Header() {
             <FaCog />
           </Link>
         </div>
-        <div className="pannel-item" onClick={handleToggleSidebar}>
-          <Link to="">
-            <FaBars />
-          </Link>
-        </div>
         <div className="pannel-item">
           <PannelLogin />
         </div>
@@ -50,7 +43,7 @@ function Header() {
   function PannelLogin() {
     const handleSignOut = () => {
       dispatch(logoutAction());
-      alertDispatch(setAlertAction(AlertCode.logout));
+      toast.info("Logged out");
     };
     if (isLogin) {
       return (
@@ -73,18 +66,32 @@ function Header() {
     }
   }
 
-  function BreadCrumb() {
+  function HeaderLeft() {
+    const sideBarToggle = () => {
+      alertDispatch(toggleSidebarAction());
+    };
     return (
-      <div className="breadcrumb">
-        <ul className="crumb-address">
-          <li>
-            <Link to="/">pages</Link>
-          </li>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-        </ul>
-        <div className="crumb-path">Dashboard</div>
+      <div className="header-left">
+        <div
+          className={`sidebar-black-wrapper bg-black bg-opacity-50 fixed md:hidden top-0 left-0 bottom-0 right-0 cursor-pointer z-[10] ${
+            sidebarShow ? "block" : "hidden"
+          }`}
+          onClick={sideBarToggle}
+        ></div>
+        <div className="sm:hidden cursor-pointer " onClick={sideBarToggle}>
+          <FaBars />
+        </div>
+        <div className="breadcrumb">
+          <ul className="crumb-address">
+            <li>
+              <Link to="/">pages</Link>
+            </li>
+            <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+          </ul>
+          <div className="crumb-path">Dashboard</div>
+        </div>
       </div>
     );
   }

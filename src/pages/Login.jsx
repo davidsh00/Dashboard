@@ -4,14 +4,21 @@ import { loginAction } from "./../context/user/action/actionCreator";
 import { useNavigate } from "react-router-dom";
 import "../styles/login.css";
 import loginImage from "../images/login-image-min.jpg";
+import { toast } from "react-toastify";
 
 function Login() {
   const navigate = useNavigate();
   const { dispatch } = useContext(usercontext);
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(loginAction());
-    navigate("/dashboard");
+    try {
+      dispatch(loginAction());
+      toast.success("You are LogIn");
+      navigate("/dashboard");
+    } catch (error) {
+      toast.error("login Faild");
+      console.log(error);
+    }
   };
   const company_name = "Site";
   return (

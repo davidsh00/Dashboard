@@ -1,28 +1,33 @@
 import { UserProvider } from "./context/user/UserContext";
-import {BrowserRouter as Router,Routes,Route, Navigate}from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import "./App.css";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
-import Alert from "./components/layout/Alert";
 import { AlertProvider } from "./context/alert/AlertContext";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-
   return (
     <div className="App">
+      <ToastContainer autoClose="2000" />
       <AlertProvider>
-      <Alert/>
-      <Router>
-      <UserProvider>
-        <Routes>
-          <Route path="/" element={<Navigate to="/dashboard"/>} ></Route>
-          <Route path="/login" element={<Login/>}/>
-          <Route  path="/dashboard" element={<Dashboard/>}/>
-          <Route path="/*" element={<NotFound/>}/>
-        </Routes>
-      </UserProvider>
-      </Router>
+        <Router>
+          <UserProvider>
+            <Routes>
+              <Route path="/" element={<Navigate to="/dashboard" />}></Route>
+              <Route path="/login" element={<Login />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/*" element={<NotFound />} />
+            </Routes>
+          </UserProvider>
+        </Router>
       </AlertProvider>
     </div>
   );
