@@ -1,22 +1,22 @@
-input{
-  @apply bg-inherit outline-none
+input {
+  @apply bg-inherit outline-none;
 }
 
-.search-box{
-  @apply relative border border-slate-600 rounded
+.search-box {
+  @apply relative border border-slate-600 rounded;
 }
-.search-box input{
-  @apply px-4 py-2
+.search-box input {
+  @apply px-4 py-2 w-full;
 }
 .search-box input + label {
-  @apply top-0 translate-y-[-65%] left-2 absolute transition-all overflow-hidden z-[500000]  w-[100px] whitespace-nowrap bg-[linear-gradient(195deg,#42424a,#191919)] px-1 text-white ;
+  @apply top-0 translate-y-[-65%] left-2 absolute transition-all overflow-hidden   w-[100px] whitespace-nowrap bg-[linear-gradient(195deg,#42424a,#191919)] px-1 text-white;
 
-  transition: all .2s ease-in,width .2s .2s ease-in;
+  transition: all 0.2s ease-in, width 0.2s 0.2s ease-in;
 }
 
-.search-box input:placeholder-shown +label {
+.search-box input:placeholder-shown + label {
   @apply left-2 top-[50%] translate-y-[-50%] w-0 whitespace-nowrap inline-block text-inherit overflow-visible bg-none;
 }
-.search-box .search-btn{
-  @apply absolute right-2 top-[50%] translate-y-[-50%]
+.search-box .search-btn {
+  @apply absolute right-2 top-[50%] translate-y-[-50%];
 }

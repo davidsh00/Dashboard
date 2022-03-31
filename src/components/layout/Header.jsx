@@ -15,9 +15,15 @@ function Header() {
 
   return (
     <header>
-      <HeaderLeft />
-      <SearchBox />
-      <HeaderRight />
+      <div className="order-1">
+        <HeaderLeft />
+      </div>
+      <div className="order-3 sm:order-2 w-full sm:w-auto">
+        <SearchBox />
+      </div>
+      <div className="order-2 sm:order-3 ">
+        <HeaderRight />
+      </div>
     </header>
   );
 
@@ -73,7 +79,7 @@ function Header() {
     return (
       <div className="header-left">
         <div
-          className={`sidebar-black-wrapper bg-black bg-opacity-50 fixed md:hidden top-0 left-0 bottom-0 right-0 cursor-pointer z-[10] ${
+          className={`sidebar-black-wrapper select-none bg-black bg-opacity-50 fixed md:hidden top-0 left-0 bottom-0 right-0 cursor-pointer z-[10] ${
             sidebarShow ? "block" : "hidden"
           }`}
           onClick={sideBarToggle}
