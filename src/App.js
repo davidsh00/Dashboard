@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import Dashboard from "./pages/Dashboard";
-import Login from "./pages/Login";
+import LoginPage from "./pages/LoginPage";
 import NotFound from "./pages/NotFound";
 import { AlertProvider } from "./context/alert/AlertContext";
 import { ToastContainer } from "react-toastify";
@@ -22,7 +22,7 @@ function App() {
           <UserProvider>
             <Routes>
               <Route path="/" element={<Navigate to="/dashboard" />}></Route>
-              <Route path="/login" element={<Login />} />
+              <Route path="/login" element={<LoginPage />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/*" element={<NotFound />} />
             </Routes>

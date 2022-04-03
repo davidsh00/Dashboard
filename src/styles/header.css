@@ -23,3 +23,6 @@ header {
 .crumb-address > *:not(:last-child) {
   @apply text-slate-600;
 }
+.profile-img{
+  @apply h-12 w-12 rounded-full bg-white flex justify-center items-center p-1
+}

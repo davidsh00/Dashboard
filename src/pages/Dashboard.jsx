@@ -15,7 +15,7 @@ function Dashboard() {
   let navigate = useNavigate();
   useEffect(() => {
     if (!isLogin) {
-      return navigate("/login");
+      // return navigate("/login");
     } 
   }, [isLogin]);
   return (

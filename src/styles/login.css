@@ -1,42 +1,49 @@
-.login-title {
-  font-family: "KG Hope For A Cure";
-  font-weight: bolder;
-  font-size: 2rem;
+.login-container {
+  @apply flex justify-center items-center w-screen h-screen bg-black bg-opacity-80 overflow-hidden fixed top-0 left-0;
 }
-.login .login-form .input-control {
-  @apply relative p-4  border border-slate-500;
-}
-.login .login-form .input-control label {
-  @apply transition-all absolute  top-0 left-[.1rem] text-sm opacity-40;
-}
-.login .login-form .input-control input {
-  @apply outline-none w-full h-full bg-inherit;
-}
-.login .login-form .input-control input:placeholder-shown + label {
-  @apply top-[50%] left-[1rem]  translate-y-[-50%] text-base opacity-60;
-}
-.login .login-image {
-  @apply w-0 sm:w-[55%];
+.login-container .login-form {
+  @apply w-full h-full  sm:h-auto sm:w-[400px] sm:max-h-[580px] gap-6 flex flex-col justify-start overflow-hidden overflow-y-auto  bg-white shadow-sm rounded-lg p-8;
 }
 
-.login .login-image img {
-  @apply object-cover;
+.login-form .login-brand {
+  @apply text-center;
 }
-.login .login-description {
-  @apply opacity-50;
+.login-form .brand-circle {
+  @apply w-16 h-16 rounded-full bg-indigo-600 text-white flex justify-center items-center mx-auto mb-2;
 }
-.login-form-wrapper{
-  @apply w-full sm:w-[45%] flex h-full justify-center items-center flex-col
+.login-form .brand-title {
+  @apply text-black text-2xl text-opacity-40 font-bold;
 }
-
-.login{
-  @apply h-screen w-full flex
+.login-form .login-description {
+  @apply text-center;
 }
-.login .login-form{
-  @apply flex flex-col gap-4
+.login-form .login-description h2 {
+  @apply font-bold text-black mb-1;
 }
-
-
-
-
-
+.login-form .login-description p {
+  @apply text-black text-sm text-opacity-40;
+}
+.login-form form {
+  @apply flex flex-col gap-4;
+}
+.login-form .form-control {
+  @apply flex flex-col;
+}
+.login-form .form-control input {
+  @apply border rounded-sm w-full focus-within:outline-blue-300 my-1 p-2;
+}
+.login-form .password-wrapper {
+  @apply relative;
+}
+.login-form .password-wrapper input {
+  @apply pr-8;
+}
+.login-form .password-visibility {
+  @apply absolute top-[50%] cursor-pointer translate-y-[-50%] right-4;
+}
+.login-form .submit {
+  @apply bg-blue-600 text-white  p-2 rounded-sm;
+}
+.login-form .no-problem {
+  @apply mx-auto;
+}

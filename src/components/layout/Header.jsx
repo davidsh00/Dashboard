@@ -1,5 +1,7 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "./../../styles/header.css";
+import userProfile from "../../images/user-profile.png";
+import userUnknow from "../../images/user-unknow.png";
 import { FaBell, FaUser, FaCog, FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import SearchBox from "../shared/SearchBox";
@@ -8,6 +10,7 @@ import { logoutAction } from "../../context/user/action/actionCreator";
 import alertContext from "../../context/alert/AlertContext";
 import { toggleSidebarAction } from "./../../context/alert/action/alertActionCreator";
 import { toast } from "react-toastify";
+import Login from "../shared/Login";
 
 function Header() {
   const { isLogin, dispatch } = useContext(usercontext);
@@ -32,12 +35,18 @@ function Header() {
       <div className="header-right">
         <div className="pannel-item">
           <Link to="#">
-            <FaBell />
+            <div className="profile-img">
+              {isLogin ? (
+                <img src={userProfile} alt="user-image" />
+              ) : (
+                <img src={userUnknow} alt="unknow-user" />
+              )}
+            </div>
           </Link>
         </div>
         <div className="pannel-item">
           <Link to="#">
-            <FaCog />
+            <FaBell />
           </Link>
         </div>
         <div className="pannel-item">
@@ -47,16 +56,21 @@ function Header() {
     );
   }
   function PannelLogin() {
-    const handleSignOut = () => {
-      dispatch(logoutAction());
-      toast.info("Logged out");
+    const [showLoginForm, setShowLoginForm] = useState(false);
+    const handleSignOutIn = () => {
+      if (isLogin) {
+        dispatch(logoutAction());
+        toast.info("Logged out");
+      } else {
+        setShowLoginForm(true);
+      }
     };
     if (isLogin) {
       return (
         <Link
           to="/login"
           className="flex items-center gap-1 "
-          onClick={handleSignOut}
+          onClick={handleSignOutIn}
         >
           <FaUser />
           sign out
@@ -64,10 +78,16 @@ function Header() {
       );
     } else {
       return (
-        <Link to="/login" className="flex items-center gap-1 ">
-          <FaUser />
-          sign in
-        </Link>
+        <>
+          {showLoginForm && <Login />}
+          <div
+            onClick={handleSignOutIn}
+            className="flex items-center gap-1 cursor-pointer"
+          >
+            <FaUser />
+            sign in
+          </div>
+        </>
       );
     }
   }
