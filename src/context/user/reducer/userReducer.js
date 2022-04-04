@@ -1,4 +1,4 @@
-import actionTypes from "./../action/actionType";
+import actionTypes from './../action/actionType';
 
 export const userReducer = (state, action) => {
   switch (action.type) {
@@ -20,7 +20,7 @@ export const userReducer = (state, action) => {
         ...state,
         [action.payload.cat]: [
           ...state[action.payload.cat].filter(
-            (elem) => elem != action.payload.item
+            (elem) => elem !== action.payload.item
           ),
         ],
       };

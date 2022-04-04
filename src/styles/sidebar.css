@@ -1,43 +1,40 @@
-.sidebar{
-    @apply fixed h-screen flex flex-col  transition-all  w-[250px] py-4 text-sm px-2 text-white sm:translate-x-0 z-[100] gap-4;
-    background: linear-gradient(195deg,#42424a,#191919);
+.sidebar {
+  @apply fixed h-screen flex flex-col  transition-all  w-[250px] py-4 text-sm px-2 text-white sm:translate-x-0 z-[10] gap-4;
+  background: linear-gradient(195deg, #42424a, #191919);
 }
-.sidebar
-
-.sidebar>*:not(:last-child){
-    @apply mb-4
+.sidebar .sidebar > *:not(:last-child) {
+  @apply mb-4;
 }
-.sidebar .sidebar-list{
-    @apply overflow-x-scroll
+.sidebar .sidebar-list {
+  @apply overflow-x-scroll;
 }
-.sidebar-item{
-    @apply   hover:bg-white hover:bg-opacity-10 transition-all rounded
+.sidebar-item {
+  @apply hover:bg-white hover:bg-opacity-10 transition-all rounded;
 }
-.sidebar-item >*{
-    
-    @apply flex gap-4 p-3 px-4  items-center
+.sidebar-item > * {
+  @apply flex gap-4 p-3 px-4  items-center;
 }
-.sidebar-item.active{
-    @apply bg-red-700   
+.sidebar-item.active {
+  @apply bg-red-700;
 }
 .sidebar-links {
-    @apply flex flex-col gap-4
+  @apply flex flex-col gap-4;
 }
-.sidebar-title{
-    @apply uppercase my-3 font-bold
+.sidebar-title {
+  @apply uppercase my-3 font-bold;
 }
-.sidebar-small{
-@apply w-[50px]  sm:translate-x-0 translate-x-[-100%]
+.sidebar-small {
+  @apply w-[50px]  sm:translate-x-0 translate-x-[-100%];
 }
-.sidebar-small .sidebar-brand{
-    @apply gap-0
+.sidebar-small .sidebar-brand {
+  @apply gap-0;
 }
 .sidebar-small .sidebar_item-title {
-display: none;
+  display: none;
 }
-.sidebar-small .sidebar-item>*:not(.tooltip){
-    @apply p-0 justify-center h-8
+.sidebar-small .sidebar-item > *:not(.tooltip) {
+  @apply p-0 justify-center h-8;
 }
-.sidebar-small .sidebar-title{
-    @apply mb-10 
+.sidebar-small .sidebar-title {
+  @apply mb-10;
 }

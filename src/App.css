@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("http://fonts.cdnfonts.com/css/kg-hope-for-a-cure");
+@import url('http://fonts.cdnfonts.com/css/kg-hope-for-a-cure');
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;600;700;800&display=swap');
 :root{
  --body-bg-clr:#eaebeb; 
@@ -9,9 +9,11 @@
 body {
   font-family:Mulish;
   background-color: var(--body-bg-clr);
+
 }
 img {
   @apply w-full h-full;
+  object-fit: cover
 }
 .btn {  
   @apply rounded bg-red-600 overflow-hidden text-white z-[1] px-4 py-2 relative flex-shrink-0;

@@ -1,8 +1,5 @@
-.login-container {
-  @apply flex justify-center items-center w-screen h-screen bg-black bg-opacity-80 overflow-hidden fixed top-0 left-0;
-}
-.login-container .login-form {
-  @apply w-full h-full  sm:h-auto sm:w-[400px] sm:max-h-[580px] gap-6 flex flex-col justify-start overflow-hidden overflow-y-auto  bg-white shadow-sm rounded-lg p-8;
+.login-form {
+  @apply  w-full h-full  sm:h-auto sm:w-[400px] sm:max-h-[580px] gap-6 flex flex-col justify-start overflow-hidden overflow-y-auto  bg-white shadow-sm sm:rounded-lg p-8 z-[12];
 }
 
 .login-form .login-brand {

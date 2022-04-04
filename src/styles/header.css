@@ -1,7 +1,7 @@
 header {
   @apply flex w-full flex-wrap  p-4 shadow justify-between items-center text-slate-600;
 }
-.header-right{
+.header-right {
   @apply flex gap-4 flex-row-reverse items-center;
 }
 .header-right .pannel-item {
@@ -23,6 +23,24 @@ header {
 .crumb-address > *:not(:last-child) {
   @apply text-slate-600;
 }
-.profile-img{
-  @apply h-12 w-12 rounded-full bg-white flex justify-center items-center p-1
+.profile-img {
+  @apply h-12 w-12 rounded-full overflow-hidden bg-white flex justify-center items-center border-4 border-white;
+}
+.notif-box{
+  @apply absolute right-0 top-full gap-2 group-hover:visible group-hover:opacity-100 opacity-0 invisible transition-all w-max max-w-[50vw] translate-x-8  shadow-lg z-[3] bg-white p-1 flex flex-col 
+}
+.notif-box .notif-item{
+  @apply hover:bg-gray-200 px-3 py-1 text-sm
+}
+.notif-box .notif-card{
+  @apply flex items-center justify-between gap-4
+}
+.notif-card .card-data{
+  @apply flex gap-4 items-center
+}
+.notif-card .card-img{
+  @apply  shrink-0 w-16 h-12 rounded-md overflow-hidden 
+}
+.notif-new_message{
+  @apply px-2 bg-red-600 text-white rounded-lg;
 }

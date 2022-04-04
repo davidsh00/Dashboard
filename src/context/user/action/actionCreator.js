@@ -1,4 +1,4 @@
-import actionTypes from "./actionType";
+import actionTypes from './actionType';
 export const loginAction = () => {
   return { type: actionTypes.LOGIN};
 };
