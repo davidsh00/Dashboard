@@ -44,3 +44,15 @@ header {
 .notif-new_message{
   @apply px-2 bg-red-600 text-white rounded-lg;
 }
+.searchbox-wrapper{
+  @apply order-3 sm:order-2 w-full sm:w-auto mt-4 sm:my-0
+}
+.login-container{
+  @apply bg-black h-screen w-screen fixed flex justify-center items-center bg-opacity-70 top-0 left-0 z-[11]
+}
+.close_login-btn{
+  @apply absolute top-4 right-4 hover:text-red-500 cursor-pointer z-[10] 
+}
+.sidebar-black-wrapper{
+  @apply select-none bg-black bg-opacity-50 fixed md:hidden top-0 left-0 bottom-0 right-0 cursor-pointer z-[9]
+}

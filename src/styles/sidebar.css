@@ -23,6 +23,9 @@
 .sidebar-title {
   @apply uppercase my-3 font-bold;
 }
+.sidebar-brand {
+  @apply flex items-center justify-center font-bold gap-2;
+}
 .sidebar-small {
   @apply w-[50px]  sm:translate-x-0 translate-x-[-100%];
 }
@@ -37,4 +40,7 @@
 }
 .sidebar-small .sidebar-title {
   @apply mb-10;
+}
+.tooltip {
+  @apply absolute  bg-black left-full scale-0 transition-all w-max max-w-[300px] rounded-md;
 }

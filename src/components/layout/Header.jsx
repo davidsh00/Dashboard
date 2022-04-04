@@ -23,7 +23,7 @@ function Header() {
       <div className="order-1">
         <HeaderLeft />
       </div>
-      <div className="order-3 sm:order-2 w-full sm:w-auto mt-4 sm:my-0">
+      <div className="searchbox-wrapper">
         <SearchBox />
       </div>
       <div className="order-2 sm:order-3 ">
@@ -87,7 +87,7 @@ function Header() {
         <>
           {showLoginForm && (
             <div
-              className="login-container bg-black h-screen w-screen fixed flex justify-center items-center bg-opacity-70 top-0 left-0 z-[11]"
+              className="login-container "
               id="loginContainer"
               onClick={(e) => {
                 if (e.target.id === "loginContainer") {
@@ -97,10 +97,7 @@ function Header() {
             >
               <div className="relative w-full h-full sm:w-auto sm:h-auto">
                 <Login />
-                <div
-                  className=" absolute top-4 right-4 hover:text-red-500 cursor-pointer z-[10] login-close"
-                  onClick={closeLoginForm}
-                >
+                <div className="close_login-btn " onClick={closeLoginForm}>
                   <FaTimes />
                 </div>
               </div>
@@ -125,7 +122,7 @@ function Header() {
     return (
       <div className="header-left">
         <div
-          className={`sidebar-black-wrapper select-none bg-black bg-opacity-50 fixed md:hidden top-0 left-0 bottom-0 right-0 cursor-pointer z-[9] ${
+          className={`sidebar-black-wrapper  ${
             sidebarShow ? "block" : "hidden"
           }`}
           onClick={sideBarToggle}

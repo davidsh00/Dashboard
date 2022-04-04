@@ -1,5 +1,5 @@
-export const toggleSidebarAction=()=>{
-  return{
-    type:'TOGGLE_SIDEBAR'
-  }
-}
+export const toggleSidebarAction = () => {
+  return {
+    type: "TOGGLE_SIDEBAR",
+  };
+};

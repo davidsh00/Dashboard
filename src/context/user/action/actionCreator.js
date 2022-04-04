@@ -1,15 +1,14 @@
-import actionTypes from './actionType';
+import actionTypes from "./actionType";
 export const loginAction = () => {
-  return { type: actionTypes.LOGIN};
+  return { type: actionTypes.LOGIN };
 };
-export const logoutAction=()=>{
-  return{type:actionTypes.LOGOUT}
-}
+export const logoutAction = () => {
+  return { type: actionTypes.LOGOUT };
+};
 
 export const removeItemActoin = (item, cat) => {
-    return { type: actionTypes.REMOVE_ITEM, payload:{cat,item} };
-
+  return { type: actionTypes.REMOVE_ITEM, payload: { cat, item } };
 };
-export const addItemAction=(item,cat)=>{
-return{type:actionTypes.ADD_ITEM,payload:{cat,item}}
-}
+export const addItemAction = (item, cat) => {
+  return { type: actionTypes.ADD_ITEM, payload: { cat, item } };
+};

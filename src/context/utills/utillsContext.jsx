@@ -1,5 +1,5 @@
-import { createContext, useReducer } from 'react';
-import utillsReducer from './reducer/utillsReducer';
+import { createContext, useReducer } from "react";
+import utillsReducer from "./reducer/utillsReducer";
 const utillsContext = createContext();
 export const UtillsProvider = ({ children }) => {
   const initialState = {

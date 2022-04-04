@@ -1,6 +1,6 @@
-import { useContext } from 'react';
-import usercontext from '../../context/user/UserContext';
-import ListItem from './ListItem';
+import { useContext } from "react";
+import usercontext from "../../context/user/UserContext";
+import ListItem from "./ListItem";
 
 function DoctorList() {
   const { subDoctors } = useContext(usercontext);
@@ -8,11 +8,11 @@ function DoctorList() {
     <>
       <h3>sub-Doctors:</h3>
       {subDoctors.length === 0 ? (
-        'there are no Doctors'
+        "there are no Doctors"
       ) : (
         <ul>
           {subDoctors.map((elem, i) => (
-            <ListItem key={i} name={elem} cat={'subDoctors'} />
+            <ListItem key={i} name={elem} cat={"subDoctors"} />
           ))}
         </ul>
       )}

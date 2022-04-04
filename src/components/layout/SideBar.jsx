@@ -23,7 +23,7 @@ function SideBar() {
       <li className={`sidebar-item group   ${className}`}>
         {tooltip && (
           <div
-            className={`absolute  bg-black left-full scale-0 transition-all w-max max-w-[300px] rounded-md ${
+            className={`tooltip ${
               sidebarShow ? '' : 'group-hover:scale-100'
             } ml-3 p-4 tooltip `}
           >
@@ -41,7 +41,7 @@ function SideBar() {
 
   return (
     <section className={`sidebar ${sidebarShow ? '' : 'sidebar-small'}`}>
-      <div className='sidebar-brand flex items-center justify-center font-bold gap-2  '>
+      <div className='sidebar-brand  '>
         <FaGitkraken size={30} />
         <span className='sidebar-title'>
           <span className='sidebar_item-title'>Material Dashboard</span>

@@ -1,43 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('http://fonts.cdnfonts.com/css/kg-hope-for-a-cure');
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;600;700;800&display=swap');
-:root{
- --body-bg-clr:#eaebeb; 
+@import url("http://fonts.cdnfonts.com/css/kg-hope-for-a-cure");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;600;700;800&display=swap");
+:root {
+  --body-bg-clr: #eaebeb;
 }
 body {
-  font-family:Mulish;
+  font-family: Mulish;
   background-color: var(--body-bg-clr);
-
 }
 img {
   @apply w-full h-full;
-  object-fit: cover
+  object-fit: cover;
 }
-.btn {  
+.btn {
   @apply rounded bg-red-600 overflow-hidden text-white z-[1] px-4 py-2 relative flex-shrink-0;
 }
-.btn:hover::before{
+.btn:hover::before {
   width: 300px;
   height: 300px;
 }
-.btn::before{
-  content: '';
+.btn::before {
+  content: "";
   position: absolute;
-  left:-10%;
+  left: -10%;
   top: -10%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 0;
   height: 0;
-  background: linear-gradient(195deg,#42424a,#191919);
+  background: linear-gradient(195deg, #42424a, #191919);
   z-index: -1;
   border-radius: 50%;
-  transition: all 550ms cubic-bezier(.4,0,.2,1)
+  transition: all 550ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.noscrollbar::-webkit-scrollbar{
+.noscrollbar::-webkit-scrollbar {
   display: none;
 }
-.noscrollbar{
+.noscrollbar {
   scrollbar-width: none;
 }
