@@ -95,7 +95,7 @@ function Header() {
                 }
               }}
             >
-              <div className="relative">
+              <div className="relative w-full h-full sm:w-auto sm:h-auto">
                 <Login />
                 <div
                   className=" absolute top-4 right-4 hover:text-red-500 cursor-pointer z-[10] login-close"
@@ -148,30 +148,35 @@ function Header() {
     );
   }
   function NotifBox() {
+    const a = [10, 20, 15, 30, 12];
+    const unreadNotifs = userNotifs.filter((notif) => !notif.isRead);
+
     return (
       <ul className="notif-box">
         {isLogin ? (
-          userNotifs.length > 0 ? (
-            userNotifs.map(({ notifProfile, notifMessage, notifNumber }, i) => {
-              return (
-                <li className="notif-item" key={i}>
-                  <div className="notif-card">
-                    <div className="card-data">
-                      <div className="card-img">
-                        <img src={notifProfile} alt="profile" />
+          unreadNotifs.length > 0 ? (
+            unreadNotifs.map(
+              ({ notifProfile, notifMessage, notifNumber }, i) => {
+                return (
+                  <li className="notif-item" key={i}>
+                    <div className="notif-card">
+                      <div className="card-data">
+                        <div className="card-img">
+                          <img src={notifProfile} alt="profile" />
+                        </div>
+                        <p className="card-message">{notifMessage}</p>
                       </div>
-                      <p className="card-message">{notifMessage}</p>
+                      <div className="notif-new_message">{notifNumber}</div>
                     </div>
-                    <div className="notif-new_message">{notifNumber}</div>
-                  </div>
-                </li>
-              );
-            })
+                  </li>
+                );
+              }
+            )
           ) : (
-            <li className="notif-item">there is nothing to show</li>
+            <li className="notif-item">there is no New Message</li>
           )
         ) : (
-          <li className="notif-item">please Log in first</li>
+          <li className="notif-item">Please Log in first</li>
         )}
       </ul>
     );

@@ -14,12 +14,14 @@ export function UserProvider({ children }) {
           notifMessage: "hi i want to talk you pls accept me",
           notifProfile: notifProfile1,
           notifNumber: 2,
+          isRead: true,
         },
         {
           notifMessage:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere quibusdam ea iure error necessitatibus, nihil neque atque consectetur quasi cum libero maiores ex commodi illo cupiditate delectus. Qui accusamus, praesentium quam eveniet veritatis fuga. Qui aliquid placeat hic eveniet repellat?",
           notifProfile: notifProfile2,
           notifNumber: 1,
+          isRead: false,
         },
       ],
     },
