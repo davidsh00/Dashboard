@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import { UtillsProvider } from "./context/utills/utillsContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Them from "./components/layout/Them";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             </Routes>
           </UserProvider>
         </Router>
+        <Them/>
       </UtillsProvider>
     </div>
   );

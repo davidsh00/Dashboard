@@ -15,7 +15,7 @@
   @apply flex gap-4 p-3 px-4  items-center;
 }
 .sidebar-item.active {
-  @apply bg-red-700;
+  background-color: rgb(var(--item-bg-clr));
 }
 .sidebar-links {
   @apply flex flex-col gap-4;

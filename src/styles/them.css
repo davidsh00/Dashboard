@@ -1,0 +1,39 @@
+.them-container {
+  @apply fixed top-0 translate-x-[100%] transition-all shadow-md  right-0 w-[20vw] min-w-[200px] h-screen z-[10] p-4 border-white border;
+  
+  background-color: rgb(var(--section-bg-clr));
+}
+
+.them-title {
+  @apply font-bold text-center;
+}
+.them-status {
+  @apply flex justify-center items-center gap-4 my-2;
+}
+.them-color {
+  @apply flex justify-start items-center flex-wrap gap-x-1 gap-y-3 my-4;
+}
+.them-item {
+  @apply hover:scale-110 hover:opacity-100 transition-all opacity-[90] w-12 h-12 cursor-pointer   border-4 flex justify-center items-center rounded-full overflow-hidden text-[.6rem] font-bold;
+  background-color: rgb(var(--body-bg-clr));
+}
+.them-item.dark {
+  @apply bg-black text-white border-0;
+}
+.them-item.light {
+  @apply bg-gray-200 text-black border-0;
+}
+.them-toggle{
+    @apply  cursor-pointer absolute top-[50%] text-white  right-full   translate-y-[-50%] w-6 h-6 transition-all flex justify-center items-center translate-x-[60%]  overflow-hidden rounded-sm  hover:translate-x-0 hover:text-2xl rotate-0;
+    background-color: rgb(var(--item-bg-clr));
+
+}
+.them-container.show{
+  @apply translate-x-0
+}
+.them-container.show .them-toggle{
+  @apply rounded-full hover:w-8 hover:h-8 hover:translate-x-[50%]
+}
+.them-container.show .them-toggle{
+  @apply rotate-180
+}

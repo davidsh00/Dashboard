@@ -78,7 +78,7 @@ function Login() {
       </form>
       <p className="no-problem">
         Don't have an account?{" "}
-        <span className="text-blue-600 font-bold text-sm">No Problem !</span>
+        <span className=" font-bold text-sm" style={{color:'rgb(var(--item-bg-clr))'}}>No Problem !</span>
       </p>
     </div>
   );

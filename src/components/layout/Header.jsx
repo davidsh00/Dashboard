@@ -19,7 +19,7 @@ function Header() {
   } = useContext(usercontext);
   const { dispatch: utillsDispatch, sidebarShow } = useContext(utillsContext);
   return (
-    <header>
+    <header >
       <div className="order-1">
         <HeaderLeft />
       </div>

@@ -3,13 +3,14 @@ input {
 }
 
 .search-box {
-  @apply relative border border-slate-600 rounded;
+  border-color: rgb(var(--border-clr));
+  @apply relative border  rounded;
 }
 .search-box input {
   @apply px-4 py-2 w-full;
 }
 .search-box input + label {
-  @apply top-0 translate-y-[-65%] left-2 absolute transition-all overflow-hidden   w-[100px] whitespace-nowrap bg-[linear-gradient(195deg,#42424a,#191919)] px-1 text-white;
+  @apply top-0 translate-y-[-65%]  left-2 absolute transition-all overflow-hidden   w-[100px] whitespace-nowrap bg-[linear-gradient(195deg,#42424a,#191919)] px-1 text-white;
 
   transition: all 0.2s ease-in, width 0.2s 0.2s ease-in;
 }

@@ -8,7 +8,8 @@
 .user-add-wrapper,
 .user-list-wrapper,
 .doctor-list-wrapper {
-  @apply bg-white p-4 rounded-lg;
+  @apply  p-4 rounded-lg;
+  background-color: rgb(var(--section-bg-clr))
 }
 .user-section .add-item {
   @apply flex justify-between  items-center gap-4 max-w-[600px] mx-auto;
@@ -17,7 +18,8 @@
   @apply rounded;
 }
 .user-section .add-input {
-  @apply border border-slate-700  max-w-[300px] p-2 grow shrink overflow-hidden;
+  @apply border   max-w-[300px] p-2 grow shrink overflow-hidden;
+  border-color: rgb(var(--border-clr));
 }
 .user-section .user-details {
   @apply flex flex-col sm:flex-row gap-4 sm:items-start;
@@ -33,7 +35,8 @@
   @apply cursor-pointer;
 }
 .user-section .list_item {
-  @apply flex justify-between items-center min-w-[100px] hover:bg-slate-200 p-2;
+  @apply flex justify-between items-center min-w-[100px]  p-2;
 }
-.user-section .doctor-list {
+.user-section .list_item:hover{
+  background-color:rgba(var(--item-bg-clr),.1)
 }

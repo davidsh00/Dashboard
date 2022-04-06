@@ -1,5 +1,6 @@
 .login-form {
-  @apply  w-full h-full  sm:h-auto sm:w-[400px] sm:max-h-[580px] gap-6 flex flex-col justify-start overflow-hidden overflow-y-auto  bg-white shadow-sm sm:rounded-lg p-8 z-[12];
+  @apply  w-full h-full  sm:h-auto sm:w-[400px] sm:max-h-[580px] gap-6 flex flex-col justify-start overflow-hidden overflow-y-auto   shadow-sm sm:rounded-lg p-8 z-[12];
+  background-color: rgb(var(--section-bg-clr))
 }
 
 .login-form .login-brand {
@@ -9,16 +10,16 @@
   @apply w-16 h-16 rounded-full bg-indigo-600 text-white flex justify-center items-center mx-auto mb-2;
 }
 .login-form .brand-title {
-  @apply text-black text-2xl text-opacity-40 font-bold;
+  @apply  text-2xl text-opacity-40 font-bold;
 }
 .login-form .login-description {
   @apply text-center;
 }
 .login-form .login-description h2 {
-  @apply font-bold text-black mb-1;
+  @apply font-bold  mb-1;
 }
 .login-form .login-description p {
-  @apply text-black text-sm text-opacity-40;
+  @apply  text-sm text-opacity-40;
 }
 .login-form form {
   @apply flex flex-col gap-4;
@@ -39,7 +40,8 @@
   @apply absolute top-[50%] cursor-pointer translate-y-[-50%] right-4;
 }
 .login-form .submit {
-  @apply bg-blue-600 text-white  p-2 rounded-sm;
+  @apply  text-white  p-2 rounded-sm;
+  background-color: rgb(var(--item-bg-clr))
 }
 .login-form .no-problem {
   @apply mx-auto;
