@@ -47,10 +47,10 @@ function Header() {
           </Link>
         </div>
         <div className="pannel-item pt-2">
-          <Link to="#" className="group relative inline-block">
+          <a  className="group relative inline-block">
             <FaBell size={25} />
-            <NotifBox />
-          </Link>
+            <NotifBox /> 
+          </a>
         </div>
         <div className="pannel-item">
           <PannelLogin />

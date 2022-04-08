@@ -10,12 +10,13 @@ function ListItem({ name, cat }) {
     toast.success("item Deleted");
   }
   return (
-    <li className="list_item ">
-      <div>{name}</div>
-      <button onClick={handleDeletItem}>
-        <FaTimes />
-      </button>
-    </li>
+      <li className="list_item ">
+        <div>{name}</div>
+        <button onClick={handleDeletItem}>
+          <FaTimes />
+        </button>
+      </li>
+
   );
 }
 

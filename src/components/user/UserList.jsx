@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import usercontext from "../../context/user/UserContext";
 import ListItem from "./ListItem";
+import './transition.css'
+import{TransitionGroup,CSSTransition}from'react-transition-group'
 
 function UserList() {
   const { subUsers } = useContext(usercontext);
@@ -11,11 +13,15 @@ function UserList() {
       {subUsers.length === 0 ? (
         "there are no users"
       ) : (
+        <TransitionGroup>
         <ul>
           {subUsers.map((elem, i) => (
-            <ListItem name={elem} key={i} cat={"subUsers"} />
+            <CSSTransition  classNames="fade" timeout={600} key={i}>
+            <ListItem name={elem}  cat={"subUsers"} />
+            </CSSTransition>
           ))}
         </ul>
+        </TransitionGroup>
       )}
     </>
   );
