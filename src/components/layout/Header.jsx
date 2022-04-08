@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
-import "./../../styles/header.css";
+import "../../styles/header.css";
 import userProfileUnknow from "../../images/user-profile-unknow.jpg";
 import { FaBell, FaUser, FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import SearchBox from "../shared/SearchBox";
-import usercontext from "./../../context/user/UserContext";
+import usercontext from "../../context/user/UserContext";
 import { logoutAction } from "../../context/user/action/actionCreator";
 import utillsContext from "../../context/utills/utillsContext";
 import { toggleSidebarAction } from "../../context/utills/action/utillsActionCreator";
@@ -19,7 +19,7 @@ function Header() {
   } = useContext(usercontext);
   const { dispatch: utillsDispatch, sidebarShow } = useContext(utillsContext);
   return (
-    <header >
+    <header>
       <div className="order-1">
         <HeaderLeft />
       </div>
@@ -47,9 +47,9 @@ function Header() {
           </Link>
         </div>
         <div className="pannel-item pt-2">
-          <a  className="group relative inline-block">
+          <a className="group relative inline-block">
             <FaBell size={25} />
-            <NotifBox /> 
+            <NotifBox />
           </a>
         </div>
         <div className="pannel-item">
@@ -145,7 +145,6 @@ function Header() {
     );
   }
   function NotifBox() {
-    const a = [10, 20, 15, 30, 12];
     const unreadNotifs = userNotifs.filter((notif) => !notif.isRead);
 
     return (
