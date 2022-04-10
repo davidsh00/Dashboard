@@ -4,9 +4,9 @@ const utillsContext = createContext();
 export const UtillsProvider = ({ children }) => {
   const initialState = {
     sidebarShow: false,
+    them: {mode:'light',color:'sky'}
   };
   const [state, dispatch] = useReducer(utillsReducer, initialState);
-
   return (
     <utillsContext.Provider value={{ ...state, dispatch }}>
       {children}

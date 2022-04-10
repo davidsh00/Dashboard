@@ -1,12 +1,18 @@
 import "../../styles/them.css";
 import { useRef } from "react";
 import { FaAngleLeft } from "react-icons/fa";
+import { useContext } from "react";
+import utillsContext from "../../context/utills/utillsContext";
+import { setThemAction } from "../../context/utills/action/utillsActionCreator";
 function Them() {
+  const{dispatch,them}=useContext(utillsContext)
   const themContainer = useRef();
   const handleToggleThem = (e) => {
     themContainer.current.classList.toggle('show')
   };
-  const changeThem = (e) => {
+  const changeThemColor = (e) => {
+    dispatch(setThemAction(e.target.classList[0]))
+console.log(them)
     const changeCssVar = (varName, varValue) => {
       document.documentElement.style.setProperty(varName, varValue);
     };
@@ -57,33 +63,33 @@ function Them() {
       </div>
       <h3 className="them-title">Select your favorit!</h3>
       <div className="them-status">
-        <div className="dark them-item " onClick={changeThem}>
+        <div className="dark them-item " onClick={changeThemMode}>
           Dark
         </div>
-        <div className="light them-item " onClick={changeThem}>
+        <div className="light them-item " onClick={changeThemMode}>
           Light
         </div>
       </div>
       <ul className="them-color">
-        <div className="red border-red-600 them-item " onClick={changeThem}>
+        <div className="red border-red-600 them-item " onClick={changeThemColor}>
           red
         </div>
-        <div className="sky border-sky-500 them-item " onClick={changeThem}>
+        <div className="sky border-sky-500 them-item " onClick={changeThemColor}>
           sky
         </div>
         <div
           className="indigo border-indigo-500 them-item "
-          onClick={changeThem}
+          onClick={changeThemColor}
         >
           indigo
         </div>
         <div
           className="green border-green-500  them-item "
-          onClick={changeThem}
+          onClick={changeThemColor}
         >
           green
         </div>
-        <div className="blue border-blue-500  them-item " onClick={changeThem}>
+        <div className="blue border-blue-500  them-item " onClick={changeThemColor}>
           blue
         </div>
       </ul>
