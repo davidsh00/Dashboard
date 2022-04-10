@@ -11,7 +11,7 @@
   --primary-clr: 15, 23, 42;
   --secondary-clr: 255, 255, 255;
   --hover-clr: 0, 0, 0;
-  --shadow-clr:0,0,0;
+  --shadow-clr: 0, 0, 0;
 }
 body {
   font-family: Mulish;
@@ -19,7 +19,7 @@ body {
   transition: background 0.4s;
   color: rgb(var(--primary-clr));
 }
-img { 
+img {
   @apply w-full h-full;
   object-fit: cover;
 }

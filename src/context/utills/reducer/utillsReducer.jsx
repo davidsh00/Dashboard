@@ -6,12 +6,30 @@ const utillsReducer = (state, action) => {
         ...state,
         sidebarShow: !state.sidebarShow,
       };
-      case actionTypes.SET_THEM:
-        
-        return{
-          ...state,
-          them:action.payload
-        }
+    case actionTypes.SET_THEM_COLOR:
+      localStorage.setItem(
+        "them",
+        JSON.stringify({
+          ...JSON.parse(localStorage.getItem("them")),
+          color: action.payload,
+        })
+      );
+      return {
+        ...state,
+        them: { ...state.them, color: action.payload },
+      };
+    case actionTypes.SET_THEM_MODE:
+      localStorage.setItem(
+        "them",
+        JSON.stringify({
+          ...JSON.parse(localStorage.getItem("them")),
+          mode: action.payload,
+        })
+      );
+      return {
+        ...state,
+        them: { ...state.them, mode: action.payload },
+      };
     default:
       return state;
   }

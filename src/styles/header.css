@@ -1,14 +1,15 @@
 header {
-  @apply flex w-full flex-wrap  p-4 shadow justify-between items-center ;
+  @apply flex w-full flex-wrap  p-4 shadow justify-between items-center text-white;
+  background-color: rgba(var(--header-bg-clr), 0.9);
 }
 .header-right {
   @apply flex gap-4 flex-row-reverse items-center;
 }
 .header-right .pannel-item {
-  @apply  text-lg;
+  @apply text-lg;
 }
 .header-right .pannel-item:hover {
-color:rgb(var(--hover-clr))
+  color: rgb(var(--hover-clr));
 }
 
 .breadcrumb {
@@ -24,39 +25,43 @@ color:rgb(var(--hover-clr))
   @apply after:content-['/'] after:mx-2;
 }
 .crumb-address > *:not(:last-child) {
-  @apply opacity-50
+  @apply opacity-50;
 }
 .profile-img {
   @apply h-12 w-12 rounded-full overflow-hidden bg-white flex justify-center items-center border-4 border-white;
 }
-.notif-box{
+.notif-box {
   @apply absolute right-0 top-full gap-2 group-hover:visible group-hover:opacity-100 opacity-0 invisible transition-all w-max max-w-[50vw] translate-x-8  shadow-lg z-[3]  p-1 flex flex-col;
   background-color: rgb(var(--section-bg-clr));
+  color: rgb(var(--primary-clr));
 }
-.notif-box .notif-item{
-  @apply hover:bg-gray-200 px-3 py-1 text-sm
+.notif-box .notif-item {
+  @apply px-3 py-1 text-sm;
 }
-.notif-box .notif-card{
-  @apply flex items-center justify-between gap-4
+.notif-box .notif-item:hover {
+  background-color: rgba(var(--hover-clr), 0.2);
 }
-.notif-card .card-data{
-  @apply flex gap-4 items-center
+.notif-box .notif-card {
+  @apply flex items-center justify-between gap-4;
 }
-.notif-card .card-img{
-  @apply  shrink-0 w-16 h-12 rounded-md overflow-hidden 
+.notif-card .card-data {
+  @apply flex gap-4 items-center;
 }
-.notif-new_message{
+.notif-card .card-img {
+  @apply shrink-0 w-16 h-12 rounded-md overflow-hidden;
+}
+.notif-new_message {
   @apply px-2 bg-red-600 text-white rounded-lg;
 }
-.searchbox-wrapper{
-  @apply order-3 sm:order-2 w-full sm:w-auto mt-4 sm:my-0
+.searchbox-wrapper {
+  @apply order-3 sm:order-2 w-full sm:w-auto mt-4 sm:my-0;
 }
-.login-container{
-  @apply bg-black h-screen w-screen fixed flex justify-center items-center bg-opacity-70 top-0 left-0 z-[11]
+.login-container {
+  @apply bg-black h-screen w-screen fixed flex justify-center items-center bg-opacity-70 top-0 left-0 z-[11];
 }
-.close_login-btn{
-  @apply absolute top-4 right-4 hover:text-red-500 cursor-pointer z-[10] 
+.close_login-btn {
+  @apply absolute top-4 right-4 hover:text-red-500 cursor-pointer z-[10];
 }
-.sidebar-black-wrapper{
-  @apply select-none bg-black bg-opacity-50 fixed md:hidden top-0 left-0 bottom-0 right-0 cursor-pointer z-[9]
+.sidebar-black-wrapper {
+  @apply select-none bg-black bg-opacity-50 fixed md:hidden top-0 left-0 bottom-0 right-0 cursor-pointer z-[9];
 }
